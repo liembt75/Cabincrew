@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ERMSModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CR_Flight_Dutyfree">
+          <Key>
+            <PropertyRef Name="FlightID" />
+          </Key>
+          <Property Name="FlightID" Type="int" Nullable="false" />
+          <Property Name="Qly" Type="int" Nullable="false" />
+          <Property Name="RealQly" Type="int" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Total" Type="float" />
+          <Property Name="KPTinfo" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+          <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CR_FlightInfo">
+          <Key>
+            <PropertyRef Name="FlightID" />
+          </Key>
+          <Property Name="FlightID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="FlightNo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Routing" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Aircraft" Type="varchar" MaxLength="10" />
+          <Property Name="RegisterNo" Type="varchar" MaxLength="10" />
+          <Property Name="UTC" Type="datetime" />
+          <Property Name="Departed" Type="datetime" />
+          <Property Name="Arrived" Type="datetime" />
+          <Property Name="Parking" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeApl" Type="varchar" MaxLength="10" />
+          <Property Name="Acf" Type="varchar" MaxLength="10" />
+          <Property Name="AcfNo" Type="varchar" MaxLength="10" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="Note" Type="nvarchar" MaxLength="400" />
+          <Property Name="VipRemark" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SpecialInfo" Type="nvarchar" MaxLength="200" />
+          <Property Name="Carry" Type="varchar" MaxLength="10" />
+          <Property Name="Capacity" Type="int" />
+          <Property Name="Classify" Type="varchar" MaxLength="50" />
+          <Property Name="PaxRemark" Type="varchar" MaxLength="100" />
+          <Property Name="TotalPax" Type="int" />
+          <Property Name="TotalPaxC" Type="int" />
+          <Property Name="TotalPaxI" Type="int" />
+          <Property Name="TotalPaxY" Type="int" />
+          <Property Name="CkinC" Type="int" />
+          <Property Name="CkinI" Type="int" />
+          <Property Name="CkinY" Type="int" />
+          <Property Name="TotalPaxCKI" Type="int" />
+          <Property Name="TotalVIP" Type="int" />
+          <Property Name="TotalCIP" Type="int" />
+          <Property Name="TotalWchr" Type="int" />
+          <Property Name="TotalSM" Type="int" />
+          <Property Name="TotalBSCT" Type="int" />
+          <Property Name="TotalINF" Type="int" />
+          <Property Name="TotalUM" Type="int" />
+          <Property Name="TotalBLND" Type="int" />
+          <Property Name="TotalDEAF" Type="int" />
+          <Property Name="TotalSTCR" Type="int" />
+          <Property Name="TotalEXST" Type="int" />
+          <Property Name="TotalDEPU" Type="int" />
+          <Property Name="Version" Type="int" />
+          <Property Name="isLocked" Type="bit" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+          <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+          <Property Name="CrewTaskStatus" Type="int" />
+          <Property Name="FlightReportStatus" Type="int" />
+          <Property Name="AssessmentStatus" Type="int" />
+          <Property Name="OJTStatus" Type="int" />
+          <Property Name="Purserid" Type="varchar" MaxLength="10" />
+          <Property Name="PurserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PurserDate" Type="datetime" />
+          <Property Name="FORequest" Type="bit" />
+          <Property Name="FORequested" Type="datetime" />
+          <Property Name="FOApplied" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="ERMSModel1StoreContainer">
+          <EntitySet Name="CR_Flight_Dutyfree" EntityType="Self.CR_Flight_Dutyfree" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERMSModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CR_Flight_Dutyfree">
+          <Key>
+            <PropertyRef Name="FlightID" />
+          </Key>
+          <Property Name="FlightID" Type="Int32" Nullable="false" />
+          <Property Name="Qly" Type="Int32" Nullable="false" />
+          <Property Name="RealQly" Type="Int32" />
+          <Property Name="Remark" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Total" Type="Double" />
+          <Property Name="KPTinfo" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CR_FlightInfo">
+          <Key>
+            <PropertyRef Name="FlightID" />
+          </Key>
+          <Property Name="FlightID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FlightNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Routing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Aircraft" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RegisterNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UTC" Type="DateTime" Precision="3" />
+          <Property Name="Departed" Type="DateTime" Precision="3" />
+          <Property Name="Arrived" Type="DateTime" Precision="3" />
+          <Property Name="Parking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeApl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Acf" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AcfNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Note" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="VipRemark" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SpecialInfo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Carry" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Capacity" Type="Int32" />
+          <Property Name="Classify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PaxRemark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TotalPax" Type="Int32" />
+          <Property Name="TotalPaxC" Type="Int32" />
+          <Property Name="TotalPaxI" Type="Int32" />
+          <Property Name="TotalPaxY" Type="Int32" />
+          <Property Name="CkinC" Type="Int32" />
+          <Property Name="CkinI" Type="Int32" />
+          <Property Name="CkinY" Type="Int32" />
+          <Property Name="TotalPaxCKI" Type="Int32" />
+          <Property Name="TotalVIP" Type="Int32" />
+          <Property Name="TotalCIP" Type="Int32" />
+          <Property Name="TotalWchr" Type="Int32" />
+          <Property Name="TotalSM" Type="Int32" />
+          <Property Name="TotalBSCT" Type="Int32" />
+          <Property Name="TotalINF" Type="Int32" />
+          <Property Name="TotalUM" Type="Int32" />
+          <Property Name="TotalBLND" Type="Int32" />
+          <Property Name="TotalDEAF" Type="Int32" />
+          <Property Name="TotalSTCR" Type="Int32" />
+          <Property Name="TotalEXST" Type="Int32" />
+          <Property Name="TotalDEPU" Type="Int32" />
+          <Property Name="Version" Type="Int32" />
+          <Property Name="isLocked" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CrewTaskStatus" Type="Int32" />
+          <Property Name="FlightReportStatus" Type="Int32" />
+          <Property Name="AssessmentStatus" Type="Int32" />
+          <Property Name="OJTStatus" Type="Int32" />
+          <Property Name="Purserid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PurserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PurserDate" Type="DateTime" Precision="3" />
+          <Property Name="FORequest" Type="Boolean" />
+          <Property Name="FORequested" Type="DateTime" Precision="3" />
+          <Property Name="FOApplied" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="ERMSEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CR_Flight_Dutyfree" EntityType="Self.CR_Flight_Dutyfree" />
+          <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERMSModel1StoreContainer" CdmEntityContainer="ERMSEntities1">
+          <EntitySetMapping Name="CR_Flight_Dutyfree">
+            <EntityTypeMapping TypeName="ERMSModel1.CR_Flight_Dutyfree">
+              <MappingFragment StoreEntitySet="CR_Flight_Dutyfree">
+                <ScalarProperty Name="FlightID" ColumnName="FlightID" />
+                <ScalarProperty Name="Qly" ColumnName="Qly" />
+                <ScalarProperty Name="RealQly" ColumnName="RealQly" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="KPTinfo" ColumnName="KPTinfo" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+                <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CR_FlightInfo">
+            <EntityTypeMapping TypeName="ERMSModel1.CR_FlightInfo">
+              <MappingFragment StoreEntitySet="CR_FlightInfo">
+                <ScalarProperty Name="FlightID" ColumnName="FlightID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FlightNo" ColumnName="FlightNo" />
+                <ScalarProperty Name="Routing" ColumnName="Routing" />
+                <ScalarProperty Name="Aircraft" ColumnName="Aircraft" />
+                <ScalarProperty Name="RegisterNo" ColumnName="RegisterNo" />
+                <ScalarProperty Name="UTC" ColumnName="UTC" />
+                <ScalarProperty Name="Departed" ColumnName="Departed" />
+                <ScalarProperty Name="Arrived" ColumnName="Arrived" />
+                <ScalarProperty Name="Parking" ColumnName="Parking" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+                <ScalarProperty Name="TypeApl" ColumnName="TypeApl" />
+                <ScalarProperty Name="Acf" ColumnName="Acf" />
+                <ScalarProperty Name="AcfNo" ColumnName="AcfNo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="VipRemark" ColumnName="VipRemark" />
+                <ScalarProperty Name="SpecialInfo" ColumnName="SpecialInfo" />
+                <ScalarProperty Name="Carry" ColumnName="Carry" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Classify" ColumnName="Classify" />
+                <ScalarProperty Name="PaxRemark" ColumnName="PaxRemark" />
+                <ScalarProperty Name="TotalPax" ColumnName="TotalPax" />
+                <ScalarProperty Name="TotalPaxC" ColumnName="TotalPaxC" />
+                <ScalarProperty Name="TotalPaxI" ColumnName="TotalPaxI" />
+                <ScalarProperty Name="TotalPaxY" ColumnName="TotalPaxY" />
+                <ScalarProperty Name="CkinC" ColumnName="CkinC" />
+                <ScalarProperty Name="CkinI" ColumnName="CkinI" />
+                <ScalarProperty Name="CkinY" ColumnName="CkinY" />
+                <ScalarProperty Name="TotalPaxCKI" ColumnName="TotalPaxCKI" />
+                <ScalarProperty Name="TotalVIP" ColumnName="TotalVIP" />
+                <ScalarProperty Name="TotalCIP" ColumnName="TotalCIP" />
+                <ScalarProperty Name="TotalWchr" ColumnName="TotalWchr" />
+                <ScalarProperty Name="TotalSM" ColumnName="TotalSM" />
+                <ScalarProperty Name="TotalBSCT" ColumnName="TotalBSCT" />
+                <ScalarProperty Name="TotalINF" ColumnName="TotalINF" />
+                <ScalarProperty Name="TotalUM" ColumnName="TotalUM" />
+                <ScalarProperty Name="TotalBLND" ColumnName="TotalBLND" />
+                <ScalarProperty Name="TotalDEAF" ColumnName="TotalDEAF" />
+                <ScalarProperty Name="TotalSTCR" ColumnName="TotalSTCR" />
+                <ScalarProperty Name="TotalEXST" ColumnName="TotalEXST" />
+                <ScalarProperty Name="TotalDEPU" ColumnName="TotalDEPU" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="isLocked" ColumnName="isLocked" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+                <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+                <ScalarProperty Name="CrewTaskStatus" ColumnName="CrewTaskStatus" />
+                <ScalarProperty Name="FlightReportStatus" ColumnName="FlightReportStatus" />
+                <ScalarProperty Name="AssessmentStatus" ColumnName="AssessmentStatus" />
+                <ScalarProperty Name="OJTStatus" ColumnName="OJTStatus" />
+                <ScalarProperty Name="Purserid" ColumnName="Purserid" />
+                <ScalarProperty Name="PurserName" ColumnName="PurserName" />
+                <ScalarProperty Name="PurserDate" ColumnName="PurserDate" />
+                <ScalarProperty Name="FORequest" ColumnName="FORequest" />
+                <ScalarProperty Name="FORequested" ColumnName="FORequested" />
+                <ScalarProperty Name="FOApplied" ColumnName="FOApplied" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SataHRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="smsAddressBook">
+    <Key>
+      <PropertyRef Name="AddressBookID" />
+    </Key>
+    <Property Name="AddressBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PrivateEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MainBase" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Course" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CrewType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="OnPlane" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="WorkingStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AdditionalInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bSync" Type="Boolean" />
+    <Property Name="isWhiteList" Type="Boolean" />
+    <Property Name="isBlackList" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="SataHRMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="smsAddressBooks" EntityType="Self.smsAddressBook" />
+  </EntityContainer>
+</Schema>

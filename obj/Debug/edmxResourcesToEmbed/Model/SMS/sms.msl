@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SataHRMModelStoreContainer" CdmEntityContainer="SataHRMEntities">
+    <EntitySetMapping Name="smsAddressBooks">
+      <EntityTypeMapping TypeName="SataHRMModel.smsAddressBook">
+        <MappingFragment StoreEntitySet="smsAddressBook">
+          <ScalarProperty Name="AddressBookID" ColumnName="AddressBookID" />
+          <ScalarProperty Name="ContactCode" ColumnName="ContactCode" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PrivateEmail" ColumnName="PrivateEmail" />
+          <ScalarProperty Name="MainBase" ColumnName="MainBase" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="CrewType" ColumnName="CrewType" />
+          <ScalarProperty Name="OnPlane" ColumnName="OnPlane" />
+          <ScalarProperty Name="WorkingStatus" ColumnName="WorkingStatus" />
+          <ScalarProperty Name="AdditionalInfo" ColumnName="AdditionalInfo" />
+          <ScalarProperty Name="bSync" ColumnName="bSync" />
+          <ScalarProperty Name="isWhiteList" ColumnName="isWhiteList" />
+          <ScalarProperty Name="isBlackList" ColumnName="isBlackList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

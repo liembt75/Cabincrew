@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VietnamRedantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="chucdanh">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_ns" Type="int" Nullable="false" />
+          <Property Name="chucdanh" Type="int" Nullable="false" />
+          <Property Name="chucdanh_noilam" Type="bit" Nullable="false" />
+          <Property Name="chucdanh_ngay" Type="smalldatetime" Nullable="false" />
+          <Property Name="chucdanh_ngayhet" Type="smalldatetime" />
+          <Property Name="chucdang_soqd" Type="nvarchar" MaxLength="20" />
+          <Property Name="chucdanh_ngayky" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="chucvu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_ns" Type="int" Nullable="false" />
+          <Property Name="chucvu" Type="int" Nullable="false" />
+          <Property Name="chucvu_ngay" Type="smalldatetime" Nullable="false" />
+          <Property Name="chucvu_ngayhet" Type="smalldatetime" />
+          <Property Name="chucvu_noibo" Type="bit" />
+          <Property Name="chucvu_soqd" Type="nvarchar" MaxLength="20" />
+          <Property Name="chucvu_ngayky" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="danhmuc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaDanhMuc" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TenDanhMuc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoaiDanhMuc" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TinhTrang" Type="bit" Nullable="false" />
+          <Property Name="idDanhMucCu" Type="int" />
+          <Property Name="nhom" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="HoSoGoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mans" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="ns_ho" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="ns_ten" Type="nvarchar" MaxLength="20" />
+          <Property Name="ns_stt" Type="nvarchar" MaxLength="3" />
+          <Property Name="loains" Type="int" Nullable="false" />
+          <Property Name="ngaysinh" Type="smalldatetime" Nullable="false" />
+          <Property Name="gioitinh" Type="int" Nullable="false" />
+          <Property Name="noisinh_qg" Type="int" Nullable="false" />
+          <Property Name="noisinh_tinhtp" Type="int" Nullable="false" />
+          <Property Name="quequan_qg" Type="int" Nullable="false" />
+          <Property Name="quequan_tinhtp" Type="int" Nullable="false" />
+          <Property Name="quequan_dc" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ttru_qg" Type="int" Nullable="false" />
+          <Property Name="ttru_tinhtp" Type="int" Nullable="false" />
+          <Property Name="ttru_dc" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="noio_qg" Type="int" Nullable="false" />
+          <Property Name="noio_tinhtp" Type="int" Nullable="false" />
+          <Property Name="noio_dc" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="dantoc" Type="int" Nullable="false" />
+          <Property Name="tongiao" Type="int" Nullable="false" />
+          <Property Name="quoctich" Type="int" Nullable="false" />
+          <Property Name="cmnd" Type="int" Nullable="false" />
+          <Property Name="cmnd_so" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="cmnd_ngaycap" Type="smalldatetime" Nullable="false" />
+          <Property Name="cmnd_noicap_qg" Type="int" Nullable="false" />
+          <Property Name="cmnd_noicap_tinhtp" Type="int" Nullable="false" />
+          <Property Name="tpgiadinh" Type="int" Nullable="false" />
+          <Property Name="tpbanthan" Type="int" Nullable="false" />
+          <Property Name="tthonnhan" Type="int" Nullable="false" />
+          <Property Name="dienthoaicd" Type="nvarchar" MaxLength="15" />
+          <Property Name="dienthoaidd" Type="nvarchar" MaxLength="30" />
+          <Property Name="hopthudt" Type="nvarchar" MaxLength="50" />
+          <Property Name="giadinhcs" Type="int" Nullable="false" />
+          <Property Name="thamgiaqdoi" Type="bit" Nullable="false" />
+          <Property Name="taikhoan" Type="nvarchar" MaxLength="20" />
+          <Property Name="nganhang" Type="int" />
+          <Property Name="masothue" Type="nvarchar" MaxLength="20" />
+          <Property Name="songuoipthuoc" Type="tinyint" Nullable="false" />
+          <Property Name="hocvantd" Type="int" Nullable="false" />
+          <Property Name="llchinhtri" Type="int" Nullable="false" />
+          <Property Name="nhommau" Type="int" Nullable="false" />
+          <Property Name="chieucao" Type="tinyint" Nullable="false" />
+          <Property Name="cannang" Type="tinyint" Nullable="false" />
+          <Property Name="dangvien" Type="bit" Nullable="false" />
+          <Property Name="dang_ngaykn" Type="smalldatetime" />
+          <Property Name="dang_ngaychuyen" Type="smalldatetime" />
+          <Property Name="dang_chibo" Type="int" />
+          <Property Name="dang_chucvu" Type="int" />
+          <Property Name="dang_ngayra" Type="smalldatetime" />
+          <Property Name="dang_lydora" Type="nvarchar" MaxLength="50" />
+          <Property Name="dang_kn2" Type="smalldatetime" />
+          <Property Name="dang_ngaychyen2" Type="smalldatetime" />
+          <Property Name="doanvien" Type="bit" Nullable="false" />
+          <Property Name="doan_kn" Type="smalldatetime" />
+          <Property Name="doan_chidoan" Type="int" />
+          <Property Name="doan_chucvu" Type="int" />
+          <Property Name="doan_ngayra" Type="smalldatetime" />
+          <Property Name="doan_truongthanh" Type="bit" />
+          <Property Name="congdoan" Type="bit" Nullable="false" />
+          <Property Name="congdoan_ngaykn" Type="smalldatetime" Nullable="false" />
+          <Property Name="congdoan_bophan" Type="int" Nullable="false" />
+          <Property Name="congdoan_chucvu" Type="int" Nullable="false" />
+          <Property Name="thebay" Type="nvarchar" MaxLength="20" />
+          <Property Name="thebay_ngaycap" Type="smalldatetime" />
+          <Property Name="thebay_ngayhet" Type="smalldatetime" />
+          <Property Name="thenganh" Type="nvarchar" MaxLength="20" />
+          <Property Name="thennganh_ngaycap" Type="smalldatetime" />
+          <Property Name="thenganh_ngayhet" Type="smalldatetime" />
+          <Property Name="socntvtobay" Type="nvarchar" MaxLength="20" />
+          <Property Name="socntvtobay_ngayhet" Type="smalldatetime" />
+          <Property Name="ccdichvu_ngayhet" Type="smalldatetime" />
+          <Property Name="cchuanluyenb_ngayhet" Type="smalldatetime" />
+          <Property Name="bophanlamviec" Type="int" Nullable="false" />
+          <Property Name="nangluc_gvmatdat" Type="bit" Nullable="false" />
+          <Property Name="nangluc_gvtrnmb" Type="bit" Nullable="false" />
+          <Property Name="nangluc_nhomtv" Type="int" Nullable="false" />
+          <Property Name="hinhanh" Type="image" />
+          <Property Name="dotuyen" Type="nvarchar" MaxLength="20" />
+          <Property Name="ns_ghichu" Type="nvarchar" MaxLength="200" />
+          <Property Name="lop" Type="nvarchar" MaxLength="10" />
+          <Property Name="hd_sohd" Type="nvarchar" MaxLength="20" />
+          <Property Name="bienche_ngay" Type="smalldatetime" />
+          <Property Name="bienche_tct" Type="smalldatetime" />
+          <Property Name="bienche_dtv" Type="smalldatetime" />
+          <Property Name="mauvtuyen" Type="nvarchar" MaxLength="20" />
+          <Property Name="phep_songay" Type="int" />
+          <Property Name="phep_tungay" Type="smalldatetime" />
+          <Property Name="hd_ghichu" Type="nvarchar" MaxLength="200" />
+          <Property Name="hd_hancuoi" Type="smalldatetime" />
+          <Property Name="chon" Type="bit" />
+          <Property Name="Createdhsg" Type="datetime" />
+          <Property Name="Modifiedhsg" Type="datetime" />
+          <Property Name="TenStt" Type="nvarchar" MaxLength="24" StoreGeneratedPattern="Computed" />
+          <Property Name="Tenkd" Type="nvarchar" MaxLength="50" />
+          <Property Name="nghiviec" Type="bit" />
+          <Property Name="chuyennganh" Type="int" />
+          <Property Name="chuyennganh_xephang" Type="int" />
+          <Property Name="chuyennganh_noicap" Type="nvarchar" MaxLength="80" />
+          <Property Name="chuyennganh_ngaycap" Type="smalldatetime" />
+          <Property Name="tenkodau" Type="nvarchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="khenkluat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_ns" Type="int" Nullable="false" />
+          <Property Name="kyluat" Type="bit" Nullable="false" />
+          <Property Name="ktkl_ngay" Type="smalldatetime" Nullable="false" />
+          <Property Name="ktkl_nodung" Type="int" Nullable="false" />
+          <Property Name="ktkl_capcosoketluan" Type="int" />
+          <Property Name="ktkl_capcosokhung" Type="int" />
+          <Property Name="ktkl_capcosongaykl" Type="smalldatetime" />
+          <Property Name="ktkl_capcosongaychuyen" Type="smalldatetime" />
+          <Property Name="ktkl_ngayhop" Type="smalldatetime" />
+          <Property Name="ktkl_hoidongkl" Type="nvarchar" MaxLength="250" />
+          <Property Name="ktkl_hoidongkhung" Type="int" />
+          <Property Name="ktkl_hinhthuc" Type="int" />
+          <Property Name="ktkl_loai" Type="int" />
+          <Property Name="ktkl_soqd" Type="nvarchar" MaxLength="20" />
+          <Property Name="ktkl_ngayqd" Type="smalldatetime" />
+          <Property Name="ktkl_nguoiky" Type="nvarchar" MaxLength="60" />
+          <Property Name="ktkl_tienthuong" Type="int" />
+          <Property Name="ktkl_donghoso" Type="smalldatetime" />
+          <Property Name="ktkl_ghichu" Type="nvarchar" MaxLength="250" />
+          <Property Name="ktkl_ndung" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Createdktkl" Type="datetime" />
+          <Property Name="Modifiedktkl" Type="datetime" />
+          <Property Name="diem" Type="bit" />
+        </EntityType>
+        <Association Name="FK_chucdanh_HoSoGoc">
+          <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chucdanh" Type="Self.chucdanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoSoGoc">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chucdanh">
+              <PropertyRef Name="id_ns" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chucvu_HoSoGoc">
+          <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chucvu" Type="Self.chucvu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoSoGoc">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chucvu">
+              <PropertyRef Name="id_ns" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_khenkluat_HoSoGoc">
+          <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="khenkluat" Type="Self.khenkluat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoSoGoc">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="khenkluat">
+              <PropertyRef Name="id_ns" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VietnamRedantModelStoreContainer">
+          <EntitySet Name="chucdanh" EntityType="Self.chucdanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chucvu" EntityType="Self.chucvu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="danhmuc" EntityType="Self.danhmuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoSoGoc" EntityType="Self.HoSoGoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="khenkluat" EntityType="Self.khenkluat" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_chucdanh_HoSoGoc" Association="Self.FK_chucdanh_HoSoGoc">
+            <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+            <End Role="chucdanh" EntitySet="chucdanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chucvu_HoSoGoc" Association="Self.FK_chucvu_HoSoGoc">
+            <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+            <End Role="chucvu" EntitySet="chucvu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_khenkluat_HoSoGoc" Association="Self.FK_khenkluat_HoSoGoc">
+            <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+            <End Role="khenkluat" EntitySet="khenkluat" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VietnamRedantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="chucdanh">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chucdanh1" Type="Int32" Nullable="false" />
+          <Property Name="chucdanh_noilam" Type="Boolean" Nullable="false" />
+          <Property Name="chucdanh_ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chucdanh_ngayhet" Type="DateTime" Precision="0" />
+          <Property Name="chucdang_soqd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="chucdanh_ngayky" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="HoSoGoc" Relationship="Self.FK_chucdanh_HoSoGoc" FromRole="chucdanh" ToRole="HoSoGoc" />
+        </EntityType>
+        <EntityType Name="chucvu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chucvu1" Type="Int32" Nullable="false" />
+          <Property Name="chucvu_ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="chucvu_ngayhet" Type="DateTime" Precision="0" />
+          <Property Name="chucvu_noibo" Type="Boolean" />
+          <Property Name="chucvu_soqd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="chucvu_ngayky" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="HoSoGoc" Relationship="Self.FK_chucvu_HoSoGoc" FromRole="chucvu" ToRole="HoSoGoc" />
+        </EntityType>
+        <EntityType Name="danhmuc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaDanhMuc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenDanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoaiDanhMuc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+          <Property Name="idDanhMucCu" Type="Int32" />
+          <Property Name="nhom" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HoSoGoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mans" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ns_ho" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ns_ten" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ns_stt" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="loains" Type="Int32" Nullable="false" />
+          <Property Name="ngaysinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="gioitinh" Type="Int32" Nullable="false" />
+          <Property Name="noisinh_qg" Type="Int32" Nullable="false" />
+          <Property Name="noisinh_tinhtp" Type="Int32" Nullable="false" />
+          <Property Name="quequan_qg" Type="Int32" Nullable="false" />
+          <Property Name="quequan_tinhtp" Type="Int32" Nullable="false" />
+          <Property Name="quequan_dc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ttru_qg" Type="Int32" Nullable="false" />
+          <Property Name="ttru_tinhtp" Type="Int32" Nullable="false" />
+          <Property Name="ttru_dc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="noio_qg" Type="Int32" Nullable="false" />
+          <Property Name="noio_tinhtp" Type="Int32" Nullable="false" />
+          <Property Name="noio_dc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dantoc" Type="Int32" Nullable="false" />
+          <Property Name="tongiao" Type="Int32" Nullable="false" />
+          <Property Name="quoctich" Type="Int32" Nullable="false" />
+          <Property Name="cmnd" Type="Int32" Nullable="false" />
+          <Property Name="cmnd_so" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cmnd_ngaycap" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cmnd_noicap_qg" Type="Int32" Nullable="false" />
+          <Property Name="cmnd_noicap_tinhtp" Type="Int32" Nullable="false" />
+          <Property Name="tpgiadinh" Type="Int32" Nullable="false" />
+          <Property Name="tpbanthan" Type="Int32" Nullable="false" />
+          <Property Name="tthonnhan" Type="Int32" Nullable="false" />
+          <Property Name="dienthoaicd" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="dienthoaidd" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="hopthudt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="giadinhcs" Type="Int32" Nullable="false" />
+          <Property Name="thamgiaqdoi" Type="Boolean" Nullable="false" />
+          <Property Name="taikhoan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="nganhang" Type="Int32" />
+          <Property Name="masothue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="songuoipthuoc" Type="Byte" Nullable="false" />
+          <Property Name="hocvantd" Type="Int32" Nullable="false" />
+          <Property Name="llchinhtri" Type="Int32" Nullable="false" />
+          <Property Name="nhommau" Type="Int32" Nullable="false" />
+          <Property Name="chieucao" Type="Byte" Nullable="false" />
+          <Property Name="cannang" Type="Byte" Nullable="false" />
+          <Property Name="dangvien" Type="Boolean" Nullable="false" />
+          <Property Name="dang_ngaykn" Type="DateTime" Precision="0" />
+          <Property Name="dang_ngaychuyen" Type="DateTime" Precision="0" />
+          <Property Name="dang_chibo" Type="Int32" />
+          <Property Name="dang_chucvu" Type="Int32" />
+          <Property Name="dang_ngayra" Type="DateTime" Precision="0" />
+          <Property Name="dang_lydora" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dang_kn2" Type="DateTime" Precision="0" />
+          <Property Name="dang_ngaychyen2" Type="DateTime" Precision="0" />
+          <Property Name="doanvien" Type="Boolean" Nullable="false" />
+          <Property Name="doan_kn" Type="DateTime" Precision="0" />
+          <Property Name="doan_chidoan" Type="Int32" />
+          <Property Name="doan_chucvu" Type="Int32" />
+          <Property Name="doan_ngayra" Type="DateTime" Precision="0" />
+          <Property Name="doan_truongthanh" Type="Boolean" />
+          <Property Name="congdoan" Type="Boolean" Nullable="false" />
+          <Property Name="congdoan_ngaykn" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="congdoan_bophan" Type="Int32" Nullable="false" />
+          <Property Name="congdoan_chucvu" Type="Int32" Nullable="false" />
+          <Property Name="thebay" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="thebay_ngaycap" Type="DateTime" Precision="0" />
+          <Property Name="thebay_ngayhet" Type="DateTime" Precision="0" />
+          <Property Name="thenganh" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="thennganh_ngaycap" Type="DateTime" Precision="0" />
+          <Property Name="thenganh_ngayhet" Type="DateTime" Precision="0" />
+          <Property Name="socntvtobay" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="socntvtobay_ngayhet" Type="DateTime" Precision="0" />
+          <Property Name="ccdichvu_ngayhet" Type="DateTime" Precision="0" />
+          <Property Name="cchuanluyenb_ngayhet" Type="DateTime" Precision="0" />
+          <Property Name="bophanlamviec" Type="Int32" Nullable="false" />
+          <Property Name="nangluc_gvmatdat" Type="Boolean" Nullable="false" />
+          <Property Name="nangluc_gvtrnmb" Type="Boolean" Nullable="false" />
+          <Property Name="nangluc_nhomtv" Type="Int32" Nullable="false" />
+          <Property Name="hinhanh" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="dotuyen" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ns_ghichu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="lop" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="hd_sohd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="bienche_ngay" Type="DateTime" Precision="0" />
+          <Property Name="bienche_tct" Type="DateTime" Precision="0" />
+          <Property Name="bienche_dtv" Type="DateTime" Precision="0" />
+          <Property Name="mauvtuyen" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="phep_songay" Type="Int32" />
+          <Property Name="phep_tungay" Type="DateTime" Precision="0" />
+          <Property Name="hd_ghichu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="hd_hancuoi" Type="DateTime" Precision="0" />
+          <Property Name="chon" Type="Boolean" />
+          <Property Name="Createdhsg" Type="DateTime" Precision="3" />
+          <Property Name="Modifiedhsg" Type="DateTime" Precision="3" />
+          <Property Name="TenStt" Type="String" MaxLength="24" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Tenkd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nghiviec" Type="Boolean" />
+          <Property Name="chuyennganh" Type="Int32" />
+          <Property Name="chuyennganh_xephang" Type="Int32" />
+          <Property Name="chuyennganh_noicap" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="chuyennganh_ngaycap" Type="DateTime" Precision="0" />
+          <Property Name="tenkodau" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chucdanh" Relationship="Self.FK_chucdanh_HoSoGoc" FromRole="HoSoGoc" ToRole="chucdanh" />
+          <NavigationProperty Name="chucvu" Relationship="Self.FK_chucvu_HoSoGoc" FromRole="HoSoGoc" ToRole="chucvu" />
+          <NavigationProperty Name="khenkluat" Relationship="Self.FK_khenkluat_HoSoGoc" FromRole="HoSoGoc" ToRole="khenkluat" />
+        </EntityType>
+        <EntityType Name="khenkluat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kyluat" Type="Boolean" Nullable="false" />
+          <Property Name="ktkl_ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ktkl_nodung" Type="Int32" Nullable="false" />
+          <Property Name="ktkl_capcosoketluan" Type="Int32" />
+          <Property Name="ktkl_capcosokhung" Type="Int32" />
+          <Property Name="ktkl_capcosongaykl" Type="DateTime" Precision="0" />
+          <Property Name="ktkl_capcosongaychuyen" Type="DateTime" Precision="0" />
+          <Property Name="ktkl_ngayhop" Type="DateTime" Precision="0" />
+          <Property Name="ktkl_hoidongkl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ktkl_hoidongkhung" Type="Int32" />
+          <Property Name="ktkl_hinhthuc" Type="Int32" />
+          <Property Name="ktkl_loai" Type="Int32" />
+          <Property Name="ktkl_soqd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ktkl_ngayqd" Type="DateTime" Precision="0" />
+          <Property Name="ktkl_nguoiky" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ktkl_tienthuong" Type="Int32" />
+          <Property Name="ktkl_donghoso" Type="DateTime" Precision="0" />
+          <Property Name="ktkl_ghichu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ktkl_ndung" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Createdktkl" Type="DateTime" Precision="3" />
+          <Property Name="Modifiedktkl" Type="DateTime" Precision="3" />
+          <Property Name="diem" Type="Boolean" />
+          <NavigationProperty Name="HoSoGoc" Relationship="Self.FK_khenkluat_HoSoGoc" FromRole="khenkluat" ToRole="HoSoGoc" />
+        </EntityType>
+        <Association Name="FK_chucdanh_HoSoGoc">
+          <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chucdanh" Type="Self.chucdanh" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_chucvu_HoSoGoc">
+          <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chucvu" Type="Self.chucvu" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_khenkluat_HoSoGoc">
+          <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="khenkluat" Type="Self.khenkluat" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="chucdanh" EntityType="Self.chucdanh" />
+          <EntitySet Name="chucvu" EntityType="Self.chucvu" />
+          <EntitySet Name="danhmuc" EntityType="Self.danhmuc" />
+          <EntitySet Name="HoSoGoc" EntityType="Self.HoSoGoc" />
+          <EntitySet Name="khenkluat" EntityType="Self.khenkluat" />
+          <AssociationSet Name="FK_chucdanh_HoSoGoc" Association="Self.FK_chucdanh_HoSoGoc">
+            <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+            <End Role="chucdanh" EntitySet="chucdanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chucvu_HoSoGoc" Association="Self.FK_chucvu_HoSoGoc">
+            <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+            <End Role="chucvu" EntitySet="chucvu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_khenkluat_HoSoGoc" Association="Self.FK_khenkluat_HoSoGoc">
+            <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+            <End Role="khenkluat" EntitySet="khenkluat" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VietnamRedantModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="chucdanh">
+            <EntityTypeMapping TypeName="VietnamRedantModel.chucdanh">
+              <MappingFragment StoreEntitySet="chucdanh">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="chucdanh1" ColumnName="chucdanh" />
+                <ScalarProperty Name="chucdanh_noilam" ColumnName="chucdanh_noilam" />
+                <ScalarProperty Name="chucdanh_ngay" ColumnName="chucdanh_ngay" />
+                <ScalarProperty Name="chucdanh_ngayhet" ColumnName="chucdanh_ngayhet" />
+                <ScalarProperty Name="chucdang_soqd" ColumnName="chucdang_soqd" />
+                <ScalarProperty Name="chucdanh_ngayky" ColumnName="chucdanh_ngayky" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chucvu">
+            <EntityTypeMapping TypeName="VietnamRedantModel.chucvu">
+              <MappingFragment StoreEntitySet="chucvu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="chucvu1" ColumnName="chucvu" />
+                <ScalarProperty Name="chucvu_ngay" ColumnName="chucvu_ngay" />
+                <ScalarProperty Name="chucvu_ngayhet" ColumnName="chucvu_ngayhet" />
+                <ScalarProperty Name="chucvu_noibo" ColumnName="chucvu_noibo" />
+                <ScalarProperty Name="chucvu_soqd" ColumnName="chucvu_soqd" />
+                <ScalarProperty Name="chucvu_ngayky" ColumnName="chucvu_ngayky" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="danhmuc">
+            <EntityTypeMapping TypeName="VietnamRedantModel.danhmuc">
+              <MappingFragment StoreEntitySet="danhmuc">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MaDanhMuc" ColumnName="MaDanhMuc" />
+                <ScalarProperty Name="TenDanhMuc" ColumnName="TenDanhMuc" />
+                <ScalarProperty Name="LoaiDanhMuc" ColumnName="LoaiDanhMuc" />
+                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+                <ScalarProperty Name="idDanhMucCu" ColumnName="idDanhMucCu" />
+                <ScalarProperty Name="nhom" ColumnName="nhom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoSoGoc">
+            <EntityTypeMapping TypeName="VietnamRedantModel.HoSoGoc">
+              <MappingFragment StoreEntitySet="HoSoGoc">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="mans" ColumnName="mans" />
+                <ScalarProperty Name="ns_ho" ColumnName="ns_ho" />
+                <ScalarProperty Name="ns_ten" ColumnName="ns_ten" />
+                <ScalarProperty Name="ns_stt" ColumnName="ns_stt" />
+                <ScalarProperty Name="loains" ColumnName="loains" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+                <ScalarProperty Name="noisinh_qg" ColumnName="noisinh_qg" />
+                <ScalarProperty Name="noisinh_tinhtp" ColumnName="noisinh_tinhtp" />
+                <ScalarProperty Name="quequan_qg" ColumnName="quequan_qg" />
+                <ScalarProperty Name="quequan_tinhtp" ColumnName="quequan_tinhtp" />
+                <ScalarProperty Name="quequan_dc" ColumnName="quequan_dc" />
+                <ScalarProperty Name="ttru_qg" ColumnName="ttru_qg" />
+                <ScalarProperty Name="ttru_tinhtp" ColumnName="ttru_tinhtp" />
+                <ScalarProperty Name="ttru_dc" ColumnName="ttru_dc" />
+                <ScalarProperty Name="noio_qg" ColumnName="noio_qg" />
+                <ScalarProperty Name="noio_tinhtp" ColumnName="noio_tinhtp" />
+                <ScalarProperty Name="noio_dc" ColumnName="noio_dc" />
+                <ScalarProperty Name="dantoc" ColumnName="dantoc" />
+                <ScalarProperty Name="tongiao" ColumnName="tongiao" />
+                <ScalarProperty Name="quoctich" ColumnName="quoctich" />
+                <ScalarProperty Name="cmnd" ColumnName="cmnd" />
+                <ScalarProperty Name="cmnd_so" ColumnName="cmnd_so" />
+                <ScalarProperty Name="cmnd_ngaycap" ColumnName="cmnd_ngaycap" />
+                <ScalarProperty Name="cmnd_noicap_qg" ColumnName="cmnd_noicap_qg" />
+                <ScalarProperty Name="cmnd_noicap_tinhtp" ColumnName="cmnd_noicap_tinhtp" />
+                <ScalarProperty Name="tpgiadinh" ColumnName="tpgiadinh" />
+                <ScalarProperty Name="tpbanthan" ColumnName="tpbanthan" />
+                <ScalarProperty Name="tthonnhan" ColumnName="tthonnhan" />
+                <ScalarProperty Name="dienthoaicd" ColumnName="dienthoaicd" />
+                <ScalarProperty Name="dienthoaidd" ColumnName="dienthoaidd" />
+                <ScalarProperty Name="hopthudt" ColumnName="hopthudt" />
+                <ScalarProperty Name="giadinhcs" ColumnName="giadinhcs" />
+                <ScalarProperty Name="thamgiaqdoi" ColumnName="thamgiaqdoi" />
+                <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+                <ScalarProperty Name="nganhang" ColumnName="nganhang" />
+                <ScalarProperty Name="masothue" ColumnName="masothue" />
+                <ScalarProperty Name="songuoipthuoc" ColumnName="songuoipthuoc" />
+                <ScalarProperty Name="hocvantd" ColumnName="hocvantd" />
+                <ScalarProperty Name="llchinhtri" ColumnName="llchinhtri" />
+                <ScalarProperty Name="nhommau" ColumnName="nhommau" />
+                <ScalarProperty Name="chieucao" ColumnName="chieucao" />
+                <ScalarProperty Name="cannang" ColumnName="cannang" />
+                <ScalarProperty Name="dangvien" ColumnName="dangvien" />
+                <ScalarProperty Name="dang_ngaykn" ColumnName="dang_ngaykn" />
+                <ScalarProperty Name="dang_ngaychuyen" ColumnName="dang_ngaychuyen" />
+                <ScalarProperty Name="dang_chibo" ColumnName="dang_chibo" />
+                <ScalarProperty Name="dang_chucvu" ColumnName="dang_chucvu" />
+                <ScalarProperty Name="dang_ngayra" ColumnName="dang_ngayra" />
+                <ScalarProperty Name="dang_lydora" ColumnName="dang_lydora" />
+                <ScalarProperty Name="dang_kn2" ColumnName="dang_kn2" />
+                <ScalarProperty Name="dang_ngaychyen2" ColumnName="dang_ngaychyen2" />
+                <ScalarProperty Name="doanvien" ColumnName="doanvien" />
+                <ScalarProperty Name="doan_kn" ColumnName="doan_kn" />
+                <ScalarProperty Name="doan_chidoan" ColumnName="doan_chidoan" />
+                <ScalarProperty Name="doan_chucvu" ColumnName="doan_chucvu" />
+                <ScalarProperty Name="doan_ngayra" ColumnName="doan_ngayra" />
+                <ScalarProperty Name="doan_truongthanh" ColumnName="doan_truongthanh" />
+                <ScalarProperty Name="congdoan" ColumnName="congdoan" />
+                <ScalarProperty Name="congdoan_ngaykn" ColumnName="congdoan_ngaykn" />
+                <ScalarProperty Name="congdoan_bophan" ColumnName="congdoan_bophan" />
+                <ScalarProperty Name="congdoan_chucvu" ColumnName="congdoan_chucvu" />
+                <ScalarProperty Name="thebay" ColumnName="thebay" />
+                <ScalarProperty Name="thebay_ngaycap" ColumnName="thebay_ngaycap" />
+                <ScalarProperty Name="thebay_ngayhet" ColumnName="thebay_ngayhet" />
+                <ScalarProperty Name="thenganh" ColumnName="thenganh" />
+                <ScalarProperty Name="thennganh_ngaycap" ColumnName="thennganh_ngaycap" />
+                <ScalarProperty Name="thenganh_ngayhet" ColumnName="thenganh_ngayhet" />
+                <ScalarProperty Name="socntvtobay" ColumnName="socntvtobay" />
+                <ScalarProperty Name="socntvtobay_ngayhet" ColumnName="socntvtobay_ngayhet" />
+                <ScalarProperty Name="ccdichvu_ngayhet" ColumnName="ccdichvu_ngayhet" />
+                <ScalarProperty Name="cchuanluyenb_ngayhet" ColumnName="cchuanluyenb_ngayhet" />
+                <ScalarProperty Name="bophanlamviec" ColumnName="bophanlamviec" />
+                <ScalarProperty Name="nangluc_gvmatdat" ColumnName="nangluc_gvmatdat" />
+                <ScalarProperty Name="nangluc_gvtrnmb" ColumnName="nangluc_gvtrnmb" />
+                <ScalarProperty Name="nangluc_nhomtv" ColumnName="nangluc_nhomtv" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="dotuyen" ColumnName="dotuyen" />
+                <ScalarProperty Name="ns_ghichu" ColumnName="ns_ghichu" />
+                <ScalarProperty Name="lop" ColumnName="lop" />
+                <ScalarProperty Name="hd_sohd" ColumnName="hd_sohd" />
+                <ScalarProperty Name="bienche_ngay" ColumnName="bienche_ngay" />
+                <ScalarProperty Name="bienche_tct" ColumnName="bienche_tct" />
+                <ScalarProperty Name="bienche_dtv" ColumnName="bienche_dtv" />
+                <ScalarProperty Name="mauvtuyen" ColumnName="mauvtuyen" />
+                <ScalarProperty Name="phep_songay" ColumnName="phep_songay" />
+                <ScalarProperty Name="phep_tungay" ColumnName="phep_tungay" />
+                <ScalarProperty Name="hd_ghichu" ColumnName="hd_ghichu" />
+                <ScalarProperty Name="hd_hancuoi" ColumnName="hd_hancuoi" />
+                <ScalarProperty Name="chon" ColumnName="chon" />
+                <ScalarProperty Name="Createdhsg" ColumnName="Createdhsg" />
+                <ScalarProperty Name="Modifiedhsg" ColumnName="Modifiedhsg" />
+                <ScalarProperty Name="TenStt" ColumnName="TenStt" />
+                <ScalarProperty Name="Tenkd" ColumnName="Tenkd" />
+                <ScalarProperty Name="nghiviec" ColumnName="nghiviec" />
+                <ScalarProperty Name="chuyennganh" ColumnName="chuyennganh" />
+                <ScalarProperty Name="chuyennganh_xephang" ColumnName="chuyennganh_xephang" />
+                <ScalarProperty Name="chuyennganh_noicap" ColumnName="chuyennganh_noicap" />
+                <ScalarProperty Name="chuyennganh_ngaycap" ColumnName="chuyennganh_ngaycap" />
+                <ScalarProperty Name="tenkodau" ColumnName="tenkodau" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="khenkluat">
+            <EntityTypeMapping TypeName="VietnamRedantModel.khenkluat">
+              <MappingFragment StoreEntitySet="khenkluat">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kyluat" ColumnName="kyluat" />
+                <ScalarProperty Name="ktkl_ngay" ColumnName="ktkl_ngay" />
+                <ScalarProperty Name="ktkl_nodung" ColumnName="ktkl_nodung" />
+                <ScalarProperty Name="ktkl_capcosoketluan" ColumnName="ktkl_capcosoketluan" />
+                <ScalarProperty Name="ktkl_capcosokhung" ColumnName="ktkl_capcosokhung" />
+                <ScalarProperty Name="ktkl_capcosongaykl" ColumnName="ktkl_capcosongaykl" />
+                <ScalarProperty Name="ktkl_capcosongaychuyen" ColumnName="ktkl_capcosongaychuyen" />
+                <ScalarProperty Name="ktkl_ngayhop" ColumnName="ktkl_ngayhop" />
+                <ScalarProperty Name="ktkl_hoidongkl" ColumnName="ktkl_hoidongkl" />
+                <ScalarProperty Name="ktkl_hoidongkhung" ColumnName="ktkl_hoidongkhung" />
+                <ScalarProperty Name="ktkl_hinhthuc" ColumnName="ktkl_hinhthuc" />
+                <ScalarProperty Name="ktkl_loai" ColumnName="ktkl_loai" />
+                <ScalarProperty Name="ktkl_soqd" ColumnName="ktkl_soqd" />
+                <ScalarProperty Name="ktkl_ngayqd" ColumnName="ktkl_ngayqd" />
+                <ScalarProperty Name="ktkl_nguoiky" ColumnName="ktkl_nguoiky" />
+                <ScalarProperty Name="ktkl_tienthuong" ColumnName="ktkl_tienthuong" />
+                <ScalarProperty Name="ktkl_donghoso" ColumnName="ktkl_donghoso" />
+                <ScalarProperty Name="ktkl_ghichu" ColumnName="ktkl_ghichu" />
+                <ScalarProperty Name="ktkl_ndung" ColumnName="ktkl_ndung" />
+                <ScalarProperty Name="Createdktkl" ColumnName="Createdktkl" />
+                <ScalarProperty Name="Modifiedktkl" ColumnName="Modifiedktkl" />
+                <ScalarProperty Name="diem" ColumnName="diem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_chucdanh_HoSoGoc" TypeName="VietnamRedantModel.FK_chucdanh_HoSoGoc" StoreEntitySet="chucdanh">
+            <EndProperty Name="HoSoGoc">
+              <ScalarProperty Name="id" ColumnName="id_ns" />
+            </EndProperty>
+            <EndProperty Name="chucdanh">
+              <ScalarProperty Name="id" ColumnName="id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_chucvu_HoSoGoc" TypeName="VietnamRedantModel.FK_chucvu_HoSoGoc" StoreEntitySet="chucvu">
+            <EndProperty Name="HoSoGoc">
+              <ScalarProperty Name="id" ColumnName="id_ns" />
+            </EndProperty>
+            <EndProperty Name="chucvu">
+              <ScalarProperty Name="id" ColumnName="id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_khenkluat_HoSoGoc" TypeName="VietnamRedantModel.FK_khenkluat_HoSoGoc" StoreEntitySet="khenkluat">
+            <EndProperty Name="HoSoGoc">
+              <ScalarProperty Name="id" ColumnName="id_ns" />
+            </EndProperty>
+            <EndProperty Name="khenkluat">
+              <ScalarProperty Name="id" ColumnName="id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

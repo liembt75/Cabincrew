@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERMSModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CR_Flight_Dutyfree">
+    <Key>
+      <PropertyRef Name="FlightID" />
+    </Key>
+    <Property Name="FlightID" Type="Int32" Nullable="false" />
+    <Property Name="Qly" Type="Int32" Nullable="false" />
+    <Property Name="RealQly" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="KPTinfo" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CR_FlightInfo">
+    <Key>
+      <PropertyRef Name="FlightID" />
+    </Key>
+    <Property Name="FlightID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FlightNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Routing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Aircraft" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RegisterNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="UTC" Type="DateTime" Precision="3" />
+    <Property Name="Departed" Type="DateTime" Precision="3" />
+    <Property Name="Arrived" Type="DateTime" Precision="3" />
+    <Property Name="Parking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeApl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Acf" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AcfNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="VipRemark" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialInfo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Carry" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="Classify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PaxRemark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TotalPax" Type="Int32" />
+    <Property Name="TotalPaxC" Type="Int32" />
+    <Property Name="TotalPaxI" Type="Int32" />
+    <Property Name="TotalPaxY" Type="Int32" />
+    <Property Name="CkinC" Type="Int32" />
+    <Property Name="CkinI" Type="Int32" />
+    <Property Name="CkinY" Type="Int32" />
+    <Property Name="TotalPaxCKI" Type="Int32" />
+    <Property Name="TotalVIP" Type="Int32" />
+    <Property Name="TotalCIP" Type="Int32" />
+    <Property Name="TotalWchr" Type="Int32" />
+    <Property Name="TotalSM" Type="Int32" />
+    <Property Name="TotalBSCT" Type="Int32" />
+    <Property Name="TotalINF" Type="Int32" />
+    <Property Name="TotalUM" Type="Int32" />
+    <Property Name="TotalBLND" Type="Int32" />
+    <Property Name="TotalDEAF" Type="Int32" />
+    <Property Name="TotalSTCR" Type="Int32" />
+    <Property Name="TotalEXST" Type="Int32" />
+    <Property Name="TotalDEPU" Type="Int32" />
+    <Property Name="Version" Type="Int32" />
+    <Property Name="isLocked" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CrewTaskStatus" Type="Int32" />
+    <Property Name="FlightReportStatus" Type="Int32" />
+    <Property Name="AssessmentStatus" Type="Int32" />
+    <Property Name="OJTStatus" Type="Int32" />
+    <Property Name="Purserid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PurserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PurserDate" Type="DateTime" Precision="3" />
+    <Property Name="FORequest" Type="Boolean" />
+    <Property Name="FORequested" Type="DateTime" Precision="3" />
+    <Property Name="FOApplied" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="ERMSEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CR_Flight_Dutyfree" EntityType="Self.CR_Flight_Dutyfree" />
+    <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" />
+  </EntityContainer>
+</Schema>

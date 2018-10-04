@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SalaryModelStoreContainer" CdmEntityContainer="SalaryEntities">
+    <EntitySetMapping Name="Crew_dutyfree">
+      <EntityTypeMapping TypeName="SalaryModel.Crew_dutyfree">
+        <MappingFragment StoreEntitySet="Crew_dutyfree">
+          <ScalarProperty Name="flightid" ColumnName="flightid" />
+          <ScalarProperty Name="crewid" ColumnName="crewid" />
+          <ScalarProperty Name="month" ColumnName="month" />
+          <ScalarProperty Name="commission" ColumnName="commission" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

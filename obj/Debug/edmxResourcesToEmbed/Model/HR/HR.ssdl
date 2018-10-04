@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VietnamRedantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chucdanh">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_ns" Type="int" Nullable="false" />
+    <Property Name="chucdanh" Type="int" Nullable="false" />
+    <Property Name="chucdanh_noilam" Type="bit" Nullable="false" />
+    <Property Name="chucdanh_ngay" Type="smalldatetime" Nullable="false" />
+    <Property Name="chucdanh_ngayhet" Type="smalldatetime" />
+    <Property Name="chucdang_soqd" Type="nvarchar" MaxLength="20" />
+    <Property Name="chucdanh_ngayky" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="chucvu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_ns" Type="int" Nullable="false" />
+    <Property Name="chucvu" Type="int" Nullable="false" />
+    <Property Name="chucvu_ngay" Type="smalldatetime" Nullable="false" />
+    <Property Name="chucvu_ngayhet" Type="smalldatetime" />
+    <Property Name="chucvu_noibo" Type="bit" />
+    <Property Name="chucvu_soqd" Type="nvarchar" MaxLength="20" />
+    <Property Name="chucvu_ngayky" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="danhmuc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaDanhMuc" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TenDanhMuc" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LoaiDanhMuc" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TinhTrang" Type="bit" Nullable="false" />
+    <Property Name="idDanhMucCu" Type="int" />
+    <Property Name="nhom" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="HoSoGoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mans" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="ns_ho" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="ns_ten" Type="nvarchar" MaxLength="20" />
+    <Property Name="ns_stt" Type="nvarchar" MaxLength="3" />
+    <Property Name="loains" Type="int" Nullable="false" />
+    <Property Name="ngaysinh" Type="smalldatetime" Nullable="false" />
+    <Property Name="gioitinh" Type="int" Nullable="false" />
+    <Property Name="noisinh_qg" Type="int" Nullable="false" />
+    <Property Name="noisinh_tinhtp" Type="int" Nullable="false" />
+    <Property Name="quequan_qg" Type="int" Nullable="false" />
+    <Property Name="quequan_tinhtp" Type="int" Nullable="false" />
+    <Property Name="quequan_dc" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ttru_qg" Type="int" Nullable="false" />
+    <Property Name="ttru_tinhtp" Type="int" Nullable="false" />
+    <Property Name="ttru_dc" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="noio_qg" Type="int" Nullable="false" />
+    <Property Name="noio_tinhtp" Type="int" Nullable="false" />
+    <Property Name="noio_dc" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="dantoc" Type="int" Nullable="false" />
+    <Property Name="tongiao" Type="int" Nullable="false" />
+    <Property Name="quoctich" Type="int" Nullable="false" />
+    <Property Name="cmnd" Type="int" Nullable="false" />
+    <Property Name="cmnd_so" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="cmnd_ngaycap" Type="smalldatetime" Nullable="false" />
+    <Property Name="cmnd_noicap_qg" Type="int" Nullable="false" />
+    <Property Name="cmnd_noicap_tinhtp" Type="int" Nullable="false" />
+    <Property Name="tpgiadinh" Type="int" Nullable="false" />
+    <Property Name="tpbanthan" Type="int" Nullable="false" />
+    <Property Name="tthonnhan" Type="int" Nullable="false" />
+    <Property Name="dienthoaicd" Type="nvarchar" MaxLength="15" />
+    <Property Name="dienthoaidd" Type="nvarchar" MaxLength="30" />
+    <Property Name="hopthudt" Type="nvarchar" MaxLength="50" />
+    <Property Name="giadinhcs" Type="int" Nullable="false" />
+    <Property Name="thamgiaqdoi" Type="bit" Nullable="false" />
+    <Property Name="taikhoan" Type="nvarchar" MaxLength="20" />
+    <Property Name="nganhang" Type="int" />
+    <Property Name="masothue" Type="nvarchar" MaxLength="20" />
+    <Property Name="songuoipthuoc" Type="tinyint" Nullable="false" />
+    <Property Name="hocvantd" Type="int" Nullable="false" />
+    <Property Name="llchinhtri" Type="int" Nullable="false" />
+    <Property Name="nhommau" Type="int" Nullable="false" />
+    <Property Name="chieucao" Type="tinyint" Nullable="false" />
+    <Property Name="cannang" Type="tinyint" Nullable="false" />
+    <Property Name="dangvien" Type="bit" Nullable="false" />
+    <Property Name="dang_ngaykn" Type="smalldatetime" />
+    <Property Name="dang_ngaychuyen" Type="smalldatetime" />
+    <Property Name="dang_chibo" Type="int" />
+    <Property Name="dang_chucvu" Type="int" />
+    <Property Name="dang_ngayra" Type="smalldatetime" />
+    <Property Name="dang_lydora" Type="nvarchar" MaxLength="50" />
+    <Property Name="dang_kn2" Type="smalldatetime" />
+    <Property Name="dang_ngaychyen2" Type="smalldatetime" />
+    <Property Name="doanvien" Type="bit" Nullable="false" />
+    <Property Name="doan_kn" Type="smalldatetime" />
+    <Property Name="doan_chidoan" Type="int" />
+    <Property Name="doan_chucvu" Type="int" />
+    <Property Name="doan_ngayra" Type="smalldatetime" />
+    <Property Name="doan_truongthanh" Type="bit" />
+    <Property Name="congdoan" Type="bit" Nullable="false" />
+    <Property Name="congdoan_ngaykn" Type="smalldatetime" Nullable="false" />
+    <Property Name="congdoan_bophan" Type="int" Nullable="false" />
+    <Property Name="congdoan_chucvu" Type="int" Nullable="false" />
+    <Property Name="thebay" Type="nvarchar" MaxLength="20" />
+    <Property Name="thebay_ngaycap" Type="smalldatetime" />
+    <Property Name="thebay_ngayhet" Type="smalldatetime" />
+    <Property Name="thenganh" Type="nvarchar" MaxLength="20" />
+    <Property Name="thennganh_ngaycap" Type="smalldatetime" />
+    <Property Name="thenganh_ngayhet" Type="smalldatetime" />
+    <Property Name="socntvtobay" Type="nvarchar" MaxLength="20" />
+    <Property Name="socntvtobay_ngayhet" Type="smalldatetime" />
+    <Property Name="ccdichvu_ngayhet" Type="smalldatetime" />
+    <Property Name="cchuanluyenb_ngayhet" Type="smalldatetime" />
+    <Property Name="bophanlamviec" Type="int" Nullable="false" />
+    <Property Name="nangluc_gvmatdat" Type="bit" Nullable="false" />
+    <Property Name="nangluc_gvtrnmb" Type="bit" Nullable="false" />
+    <Property Name="nangluc_nhomtv" Type="int" Nullable="false" />
+    <Property Name="hinhanh" Type="image" />
+    <Property Name="dotuyen" Type="nvarchar" MaxLength="20" />
+    <Property Name="ns_ghichu" Type="nvarchar" MaxLength="200" />
+    <Property Name="lop" Type="nvarchar" MaxLength="10" />
+    <Property Name="hd_sohd" Type="nvarchar" MaxLength="20" />
+    <Property Name="bienche_ngay" Type="smalldatetime" />
+    <Property Name="bienche_tct" Type="smalldatetime" />
+    <Property Name="bienche_dtv" Type="smalldatetime" />
+    <Property Name="mauvtuyen" Type="nvarchar" MaxLength="20" />
+    <Property Name="phep_songay" Type="int" />
+    <Property Name="phep_tungay" Type="smalldatetime" />
+    <Property Name="hd_ghichu" Type="nvarchar" MaxLength="200" />
+    <Property Name="hd_hancuoi" Type="smalldatetime" />
+    <Property Name="chon" Type="bit" />
+    <Property Name="Createdhsg" Type="datetime" />
+    <Property Name="Modifiedhsg" Type="datetime" />
+    <Property Name="TenStt" Type="nvarchar" MaxLength="24" StoreGeneratedPattern="Computed" />
+    <Property Name="Tenkd" Type="nvarchar" MaxLength="50" />
+    <Property Name="nghiviec" Type="bit" />
+    <Property Name="chuyennganh" Type="int" />
+    <Property Name="chuyennganh_xephang" Type="int" />
+    <Property Name="chuyennganh_noicap" Type="nvarchar" MaxLength="80" />
+    <Property Name="chuyennganh_ngaycap" Type="smalldatetime" />
+    <Property Name="tenkodau" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="khenkluat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_ns" Type="int" Nullable="false" />
+    <Property Name="kyluat" Type="bit" Nullable="false" />
+    <Property Name="ktkl_ngay" Type="smalldatetime" Nullable="false" />
+    <Property Name="ktkl_nodung" Type="int" Nullable="false" />
+    <Property Name="ktkl_capcosoketluan" Type="int" />
+    <Property Name="ktkl_capcosokhung" Type="int" />
+    <Property Name="ktkl_capcosongaykl" Type="smalldatetime" />
+    <Property Name="ktkl_capcosongaychuyen" Type="smalldatetime" />
+    <Property Name="ktkl_ngayhop" Type="smalldatetime" />
+    <Property Name="ktkl_hoidongkl" Type="nvarchar" MaxLength="250" />
+    <Property Name="ktkl_hoidongkhung" Type="int" />
+    <Property Name="ktkl_hinhthuc" Type="int" />
+    <Property Name="ktkl_loai" Type="int" />
+    <Property Name="ktkl_soqd" Type="nvarchar" MaxLength="20" />
+    <Property Name="ktkl_ngayqd" Type="smalldatetime" />
+    <Property Name="ktkl_nguoiky" Type="nvarchar" MaxLength="60" />
+    <Property Name="ktkl_tienthuong" Type="int" />
+    <Property Name="ktkl_donghoso" Type="smalldatetime" />
+    <Property Name="ktkl_ghichu" Type="nvarchar" MaxLength="250" />
+    <Property Name="ktkl_ndung" Type="nvarchar" MaxLength="2000" />
+    <Property Name="Createdktkl" Type="datetime" />
+    <Property Name="Modifiedktkl" Type="datetime" />
+    <Property Name="diem" Type="bit" />
+  </EntityType>
+  <Association Name="FK_chucdanh_HoSoGoc">
+    <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="chucdanh" Type="Self.chucdanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoSoGoc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="chucdanh">
+        <PropertyRef Name="id_ns" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_chucvu_HoSoGoc">
+    <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="chucvu" Type="Self.chucvu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoSoGoc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="chucvu">
+        <PropertyRef Name="id_ns" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_khenkluat_HoSoGoc">
+    <End Role="HoSoGoc" Type="Self.HoSoGoc" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="khenkluat" Type="Self.khenkluat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoSoGoc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="khenkluat">
+        <PropertyRef Name="id_ns" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VietnamRedantModelStoreContainer">
+    <EntitySet Name="chucdanh" EntityType="Self.chucdanh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chucvu" EntityType="Self.chucvu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="danhmuc" EntityType="Self.danhmuc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoSoGoc" EntityType="Self.HoSoGoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="khenkluat" EntityType="Self.khenkluat" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_chucdanh_HoSoGoc" Association="Self.FK_chucdanh_HoSoGoc">
+      <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+      <End Role="chucdanh" EntitySet="chucdanh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_chucvu_HoSoGoc" Association="Self.FK_chucvu_HoSoGoc">
+      <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+      <End Role="chucvu" EntitySet="chucvu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_khenkluat_HoSoGoc" Association="Self.FK_khenkluat_HoSoGoc">
+      <End Role="HoSoGoc" EntitySet="HoSoGoc" />
+      <End Role="khenkluat" EntitySet="khenkluat" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

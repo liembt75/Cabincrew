@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERMSModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CR_Flight_Dutyfree">
+    <Key>
+      <PropertyRef Name="FlightID" />
+    </Key>
+    <Property Name="FlightID" Type="int" Nullable="false" />
+    <Property Name="Qly" Type="int" Nullable="false" />
+    <Property Name="RealQly" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Total" Type="float" />
+    <Property Name="KPTinfo" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CR_FlightInfo">
+    <Key>
+      <PropertyRef Name="FlightID" />
+    </Key>
+    <Property Name="FlightID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="FlightNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Routing" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Aircraft" Type="varchar" MaxLength="10" />
+    <Property Name="RegisterNo" Type="varchar" MaxLength="10" />
+    <Property Name="UTC" Type="datetime" />
+    <Property Name="Departed" Type="datetime" />
+    <Property Name="Arrived" Type="datetime" />
+    <Property Name="Parking" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeApl" Type="varchar" MaxLength="10" />
+    <Property Name="Acf" Type="varchar" MaxLength="10" />
+    <Property Name="AcfNo" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="varchar" MaxLength="10" />
+    <Property Name="Note" Type="nvarchar" MaxLength="400" />
+    <Property Name="VipRemark" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SpecialInfo" Type="nvarchar" MaxLength="200" />
+    <Property Name="Carry" Type="varchar" MaxLength="10" />
+    <Property Name="Capacity" Type="int" />
+    <Property Name="Classify" Type="varchar" MaxLength="50" />
+    <Property Name="PaxRemark" Type="varchar" MaxLength="100" />
+    <Property Name="TotalPax" Type="int" />
+    <Property Name="TotalPaxC" Type="int" />
+    <Property Name="TotalPaxI" Type="int" />
+    <Property Name="TotalPaxY" Type="int" />
+    <Property Name="CkinC" Type="int" />
+    <Property Name="CkinI" Type="int" />
+    <Property Name="CkinY" Type="int" />
+    <Property Name="TotalPaxCKI" Type="int" />
+    <Property Name="TotalVIP" Type="int" />
+    <Property Name="TotalCIP" Type="int" />
+    <Property Name="TotalWchr" Type="int" />
+    <Property Name="TotalSM" Type="int" />
+    <Property Name="TotalBSCT" Type="int" />
+    <Property Name="TotalINF" Type="int" />
+    <Property Name="TotalUM" Type="int" />
+    <Property Name="TotalBLND" Type="int" />
+    <Property Name="TotalDEAF" Type="int" />
+    <Property Name="TotalSTCR" Type="int" />
+    <Property Name="TotalEXST" Type="int" />
+    <Property Name="TotalDEPU" Type="int" />
+    <Property Name="Version" Type="int" />
+    <Property Name="isLocked" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Created" Type="datetime" />
+    <Property Name="Modified" Type="datetime" />
+    <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+    <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+    <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+    <Property Name="CrewTaskStatus" Type="int" />
+    <Property Name="FlightReportStatus" Type="int" />
+    <Property Name="AssessmentStatus" Type="int" />
+    <Property Name="OJTStatus" Type="int" />
+    <Property Name="Purserid" Type="varchar" MaxLength="10" />
+    <Property Name="PurserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PurserDate" Type="datetime" />
+    <Property Name="FORequest" Type="bit" />
+    <Property Name="FORequested" Type="datetime" />
+    <Property Name="FOApplied" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="ERMSModel1StoreContainer">
+    <EntitySet Name="CR_Flight_Dutyfree" EntityType="Self.CR_Flight_Dutyfree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CR_FlightInfo" EntityType="Self.CR_FlightInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

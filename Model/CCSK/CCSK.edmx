@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ERMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ERMS.dbo.View_Healthcare' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_Healthcare">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="mantext" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Code_tv" Type="varchar" MaxLength="10" />
+          <Property Name="name_tv" Type="nvarchar" MaxLength="100" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="man" Type="bit" />
+          <Property Name="dob" Type="date" />
+          <Property Name="noisinh" Type="nvarchar" MaxLength="200" />
+          <Property Name="quoctich" Type="nvarchar" MaxLength="50" />
+          <Property Name="pag_no" Type="varchar" MaxLength="50" />
+          <Property Name="pport_no" Type="varchar" MaxLength="50" />
+          <Property Name="noicap" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group" Type="varchar" MaxLength="5" />
+          <Property Name="course" Type="varchar" MaxLength="5" />
+          <Property Name="main_base" Type="varchar" MaxLength="5" />
+          <Property Name="from_place" Type="varchar" MaxLength="5" />
+          <Property Name="start_date" Type="datetime" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="home" Type="varchar" MaxLength="5" />
+          <Property Name="type_tv" Type="char" MaxLength="1" />
+          <Property Name="term_tv" Type="varchar" MaxLength="50" />
+          <Property Name="class_tv" Type="char" MaxLength="1" />
+          <Property Name="ann" Type="bit" />
+          <Property Name="lg" Type="varchar" MaxLength="5" />
+          <Property Name="on_plan" Type="nvarchar" MaxLength="100" />
+          <Property Name="on_route" Type="varchar" MaxLength="5" />
+          <Property Name="vip" Type="nvarchar" MaxLength="50" />
+          <Property Name="knbgoc" Type="nvarchar" MaxLength="100" />
+          <Property Name="kn_khac" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="char" MaxLength="2" />
+          <Property Name="baclg" Type="varchar" MaxLength="50" />
+          <Property Name="ngaynhan" Type="date" />
+          <Property Name="ngayve" Type="date" />
+          <Property Name="ttut" Type="real" />
+          <Property Name="ma_tt" Type="real" />
+          <Property Name="fly_time" Type="int" />
+          <Property Name="int_time" Type="int" />
+          <Property Name="duty_time" Type="int" />
+          <Property Name="sochbay" Type="int" />
+          <Property Name="dubi" Type="int" />
+          <Property Name="night" Type="int" />
+          <Property Name="lc" Type="char" MaxLength="1" />
+          <Property Name="IsCrew" Type="bit" />
+          <Property Name="Account" Type="varchar" MaxLength="50" />
+          <Property Name="CrewID" Type="varchar" MaxLength="10" />
+          <Property Name="FirstNameVn" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastNameVn" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="ImageBase64" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Token" Type="varchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Created" Type="datetime" />
+          <Property Name="Modified" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="100" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="100" />
+          <Property Name="Creatorid" Type="varchar" MaxLength="50" />
+          <Property Name="Modifierid" Type="varchar" MaxLength="50" />
+          <Property Name="PPort_Date" Type="datetime" />
+          <Property Name="InfoConfirmed" Type="int" />
+          <Property Name="TokenExpired" Type="datetime" />
+          <Property Name="Ogranization" Type="varchar" MaxLength="500" />
+          <Property Name="mantext" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="Dotkham" Type="datetime" />
+          <Property Name="Expired" Type="datetime" />
+          <Property Name="Chieucao" Type="float" />
+          <Property Name="Cannang" Type="float" />
+          <Property Name="chitietsuckhoe" Type="nvarchar" MaxLength="200" />
+          <Property Name="trangthaikham" Type="nvarchar" MaxLength="10" />
+          <Property Name="IDDotKham" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ERMSModelStoreContainer">
+          <EntitySet Name="View_Healthcare" EntityType="Self.View_Healthcare" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_Healthcare].[ID] AS [ID], 
+[View_Healthcare].[Code_tv] AS [Code_tv], 
+[View_Healthcare].[name_tv] AS [name_tv], 
+[View_Healthcare].[name] AS [name], 
+[View_Healthcare].[man] AS [man], 
+[View_Healthcare].[dob] AS [dob], 
+[View_Healthcare].[noisinh] AS [noisinh], 
+[View_Healthcare].[quoctich] AS [quoctich], 
+[View_Healthcare].[pag_no] AS [pag_no], 
+[View_Healthcare].[pport_no] AS [pport_no], 
+[View_Healthcare].[noicap] AS [noicap], 
+[View_Healthcare].[Group] AS [Group], 
+[View_Healthcare].[course] AS [course], 
+[View_Healthcare].[main_base] AS [main_base], 
+[View_Healthcare].[from_place] AS [from_place], 
+[View_Healthcare].[start_date] AS [start_date], 
+[View_Healthcare].[end_date] AS [end_date], 
+[View_Healthcare].[home] AS [home], 
+[View_Healthcare].[type_tv] AS [type_tv], 
+[View_Healthcare].[term_tv] AS [term_tv], 
+[View_Healthcare].[class_tv] AS [class_tv], 
+[View_Healthcare].[ann] AS [ann], 
+[View_Healthcare].[lg] AS [lg], 
+[View_Healthcare].[on_plan] AS [on_plan], 
+[View_Healthcare].[on_route] AS [on_route], 
+[View_Healthcare].[vip] AS [vip], 
+[View_Healthcare].[knbgoc] AS [knbgoc], 
+[View_Healthcare].[kn_khac] AS [kn_khac], 
+[View_Healthcare].[status] AS [status], 
+[View_Healthcare].[baclg] AS [baclg], 
+[View_Healthcare].[ngaynhan] AS [ngaynhan], 
+[View_Healthcare].[ngayve] AS [ngayve], 
+[View_Healthcare].[ttut] AS [ttut], 
+[View_Healthcare].[ma_tt] AS [ma_tt], 
+[View_Healthcare].[fly_time] AS [fly_time], 
+[View_Healthcare].[int_time] AS [int_time], 
+[View_Healthcare].[duty_time] AS [duty_time], 
+[View_Healthcare].[sochbay] AS [sochbay], 
+[View_Healthcare].[dubi] AS [dubi], 
+[View_Healthcare].[night] AS [night], 
+[View_Healthcare].[lc] AS [lc], 
+[View_Healthcare].[IsCrew] AS [IsCrew], 
+[View_Healthcare].[Account] AS [Account], 
+[View_Healthcare].[CrewID] AS [CrewID], 
+[View_Healthcare].[FirstNameVn] AS [FirstNameVn], 
+[View_Healthcare].[LastNameVn] AS [LastNameVn], 
+[View_Healthcare].[Phone] AS [Phone], 
+[View_Healthcare].[Email] AS [Email], 
+[View_Healthcare].[ImageBase64] AS [ImageBase64], 
+[View_Healthcare].[Note] AS [Note], 
+[View_Healthcare].[Token] AS [Token], 
+[View_Healthcare].[IsDeleted] AS [IsDeleted], 
+[View_Healthcare].[Created] AS [Created], 
+[View_Healthcare].[Modified] AS [Modified], 
+[View_Healthcare].[Creator] AS [Creator], 
+[View_Healthcare].[Modifier] AS [Modifier], 
+[View_Healthcare].[Creatorid] AS [Creatorid], 
+[View_Healthcare].[Modifierid] AS [Modifierid], 
+[View_Healthcare].[PPort_Date] AS [PPort_Date], 
+[View_Healthcare].[InfoConfirmed] AS [InfoConfirmed], 
+[View_Healthcare].[TokenExpired] AS [TokenExpired], 
+[View_Healthcare].[Ogranization] AS [Ogranization], 
+[View_Healthcare].[mantext] AS [mantext], 
+[View_Healthcare].[Dotkham] AS [Dotkham], 
+[View_Healthcare].[Expired] AS [Expired], 
+[View_Healthcare].[Chieucao] AS [Chieucao], 
+[View_Healthcare].[Cannang] AS [Cannang], 
+[View_Healthcare].[chitietsuckhoe] AS [chitietsuckhoe], 
+[View_Healthcare].[trangthaikham] AS [trangthaikham], 
+[View_Healthcare].[IDDotKham] AS [IDDotKham]
+FROM [dbo].[View_Healthcare] AS [View_Healthcare]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="View_Healthcare">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="mantext" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Code_tv" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="name_tv" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="man" Type="Boolean" />
+          <Property Name="dob" Type="DateTime" Precision="0" />
+          <Property Name="noisinh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="quoctich" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pag_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pport_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="noicap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Group" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="course" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="main_base" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="from_place" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="start_date" Type="DateTime" Precision="3" />
+          <Property Name="end_date" Type="DateTime" Precision="3" />
+          <Property Name="home" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="type_tv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="term_tv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="class_tv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ann" Type="Boolean" />
+          <Property Name="lg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="on_plan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="on_route" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="vip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="knbgoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="kn_khac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="baclg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ngaynhan" Type="DateTime" Precision="0" />
+          <Property Name="ngayve" Type="DateTime" Precision="0" />
+          <Property Name="ttut" Type="Single" />
+          <Property Name="ma_tt" Type="Single" />
+          <Property Name="fly_time" Type="Int32" />
+          <Property Name="int_time" Type="Int32" />
+          <Property Name="duty_time" Type="Int32" />
+          <Property Name="sochbay" Type="Int32" />
+          <Property Name="dubi" Type="Int32" />
+          <Property Name="night" Type="Int32" />
+          <Property Name="lc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="IsCrew" Type="Boolean" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CrewID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="FirstNameVn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastNameVn" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ImageBase64" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Token" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="Created" Type="DateTime" Precision="3" />
+          <Property Name="Modified" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PPort_Date" Type="DateTime" Precision="3" />
+          <Property Name="InfoConfirmed" Type="Int32" />
+          <Property Name="TokenExpired" Type="DateTime" Precision="3" />
+          <Property Name="Ogranization" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="mantext" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dotkham" Type="DateTime" Precision="3" />
+          <Property Name="Expired" Type="DateTime" Precision="3" />
+          <Property Name="Chieucao" Type="Double" />
+          <Property Name="Cannang" Type="Double" />
+          <Property Name="chitietsuckhoe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="trangthaikham" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IDDotKham" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="View_Healthcare" EntityType="Self.View_Healthcare" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERMSModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="View_Healthcare">
+            <EntityTypeMapping TypeName="ERMSModel.View_Healthcare">
+              <MappingFragment StoreEntitySet="View_Healthcare">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code_tv" ColumnName="Code_tv" />
+                <ScalarProperty Name="name_tv" ColumnName="name_tv" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="man" ColumnName="man" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="noisinh" ColumnName="noisinh" />
+                <ScalarProperty Name="quoctich" ColumnName="quoctich" />
+                <ScalarProperty Name="pag_no" ColumnName="pag_no" />
+                <ScalarProperty Name="pport_no" ColumnName="pport_no" />
+                <ScalarProperty Name="noicap" ColumnName="noicap" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="course" ColumnName="course" />
+                <ScalarProperty Name="main_base" ColumnName="main_base" />
+                <ScalarProperty Name="from_place" ColumnName="from_place" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="home" ColumnName="home" />
+                <ScalarProperty Name="type_tv" ColumnName="type_tv" />
+                <ScalarProperty Name="term_tv" ColumnName="term_tv" />
+                <ScalarProperty Name="class_tv" ColumnName="class_tv" />
+                <ScalarProperty Name="ann" ColumnName="ann" />
+                <ScalarProperty Name="lg" ColumnName="lg" />
+                <ScalarProperty Name="on_plan" ColumnName="on_plan" />
+                <ScalarProperty Name="on_route" ColumnName="on_route" />
+                <ScalarProperty Name="vip" ColumnName="vip" />
+                <ScalarProperty Name="knbgoc" ColumnName="knbgoc" />
+                <ScalarProperty Name="kn_khac" ColumnName="kn_khac" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="baclg" ColumnName="baclg" />
+                <ScalarProperty Name="ngaynhan" ColumnName="ngaynhan" />
+                <ScalarProperty Name="ngayve" ColumnName="ngayve" />
+                <ScalarProperty Name="ttut" ColumnName="ttut" />
+                <ScalarProperty Name="ma_tt" ColumnName="ma_tt" />
+                <ScalarProperty Name="fly_time" ColumnName="fly_time" />
+                <ScalarProperty Name="int_time" ColumnName="int_time" />
+                <ScalarProperty Name="duty_time" ColumnName="duty_time" />
+                <ScalarProperty Name="sochbay" ColumnName="sochbay" />
+                <ScalarProperty Name="dubi" ColumnName="dubi" />
+                <ScalarProperty Name="night" ColumnName="night" />
+                <ScalarProperty Name="lc" ColumnName="lc" />
+                <ScalarProperty Name="IsCrew" ColumnName="IsCrew" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="CrewID" ColumnName="CrewID" />
+                <ScalarProperty Name="FirstNameVn" ColumnName="FirstNameVn" />
+                <ScalarProperty Name="LastNameVn" ColumnName="LastNameVn" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ImageBase64" ColumnName="ImageBase64" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Creatorid" ColumnName="Creatorid" />
+                <ScalarProperty Name="Modifierid" ColumnName="Modifierid" />
+                <ScalarProperty Name="PPort_Date" ColumnName="PPort_Date" />
+                <ScalarProperty Name="InfoConfirmed" ColumnName="InfoConfirmed" />
+                <ScalarProperty Name="TokenExpired" ColumnName="TokenExpired" />
+                <ScalarProperty Name="Ogranization" ColumnName="Ogranization" />
+                <ScalarProperty Name="mantext" ColumnName="mantext" />
+                <ScalarProperty Name="Dotkham" ColumnName="Dotkham" />
+                <ScalarProperty Name="Expired" ColumnName="Expired" />
+                <ScalarProperty Name="Chieucao" ColumnName="Chieucao" />
+                <ScalarProperty Name="Cannang" ColumnName="Cannang" />
+                <ScalarProperty Name="chitietsuckhoe" ColumnName="chitietsuckhoe" />
+                <ScalarProperty Name="trangthaikham" ColumnName="trangthaikham" />
+                <ScalarProperty Name="IDDotKham" ColumnName="IDDotKham" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

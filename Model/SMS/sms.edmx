@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SataHRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="smsAddressBook">
+          <Key>
+            <PropertyRef Name="AddressBookID" />
+          </Key>
+          <Property Name="AddressBookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContactCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="char" MaxLength="1" />
+          <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="OfficePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="PrivateEmail" Type="nvarchar" MaxLength="255" />
+          <Property Name="MainBase" Type="nvarchar" MaxLength="3" />
+          <Property Name="Group" Type="nvarchar" MaxLength="20" />
+          <Property Name="Course" Type="nvarchar" MaxLength="50" />
+          <Property Name="CrewType" Type="nvarchar" MaxLength="1" />
+          <Property Name="OnPlane" Type="nvarchar" MaxLength="255" />
+          <Property Name="WorkingStatus" Type="char" MaxLength="1" />
+          <Property Name="AdditionalInfo" Type="nvarchar" MaxLength="50" />
+          <Property Name="bSync" Type="bit" />
+          <Property Name="isWhiteList" Type="bit" />
+          <Property Name="isBlackList" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="SataHRMModelStoreContainer">
+          <EntitySet Name="smsAddressBook" EntityType="Self.smsAddressBook" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SataHRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="smsAddressBook">
+          <Key>
+            <PropertyRef Name="AddressBookID" />
+          </Key>
+          <Property Name="AddressBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContactCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OfficePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PrivateEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MainBase" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="Group" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Course" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CrewType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="OnPlane" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WorkingStatus" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AdditionalInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bSync" Type="Boolean" />
+          <Property Name="isWhiteList" Type="Boolean" />
+          <Property Name="isBlackList" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="SataHRMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="smsAddressBooks" EntityType="Self.smsAddressBook" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SataHRMModelStoreContainer" CdmEntityContainer="SataHRMEntities">
+          <EntitySetMapping Name="smsAddressBooks">
+            <EntityTypeMapping TypeName="SataHRMModel.smsAddressBook">
+              <MappingFragment StoreEntitySet="smsAddressBook">
+                <ScalarProperty Name="AddressBookID" ColumnName="AddressBookID" />
+                <ScalarProperty Name="ContactCode" ColumnName="ContactCode" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PrivateEmail" ColumnName="PrivateEmail" />
+                <ScalarProperty Name="MainBase" ColumnName="MainBase" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+                <ScalarProperty Name="CrewType" ColumnName="CrewType" />
+                <ScalarProperty Name="OnPlane" ColumnName="OnPlane" />
+                <ScalarProperty Name="WorkingStatus" ColumnName="WorkingStatus" />
+                <ScalarProperty Name="AdditionalInfo" ColumnName="AdditionalInfo" />
+                <ScalarProperty Name="bSync" ColumnName="bSync" />
+                <ScalarProperty Name="isWhiteList" ColumnName="isWhiteList" />
+                <ScalarProperty Name="isBlackList" ColumnName="isBlackList" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

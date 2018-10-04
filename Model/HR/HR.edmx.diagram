@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="70c0d5a13de042038be812cb554a72bb" Name="Diagram1">
+        <EntityTypeShape EntityType="VietnamRedantModel.chucdanh" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VietnamRedantModel.chucvu" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VietnamRedantModel.danhmuc" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VietnamRedantModel.HoSoGoc" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VietnamRedantModel.khenkluat" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <!--<AssociationConnector Association="VietnamRedantModel.FK_chucdanh_HoSoGoc" ManuallyRouted="false" />
+        <AssociationConnector Association="VietnamRedantModel.FK_chucvu_HoSoGoc" ManuallyRouted="false" />
+        <AssociationConnector Association="VietnamRedantModel.FK_khenkluat_HoSoGoc" ManuallyRouted="false" />-->
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

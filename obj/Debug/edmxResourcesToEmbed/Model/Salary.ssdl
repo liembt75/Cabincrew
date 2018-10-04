@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalaryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Salary.dbo.Crew_dutyfree' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Crew_dutyfree">
+    <Key>
+      <PropertyRef Name="flightid" />
+      <PropertyRef Name="crewid" />
+      <PropertyRef Name="month" />
+    </Key>
+    <Property Name="flightid" Type="int" Nullable="false" />
+    <Property Name="crewid" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="month" Type="nchar" MaxLength="7" Nullable="false" />
+    <Property Name="commission" Type="float" />
+    <Property Name="rate" Type="int" />
+  </EntityType>
+  <EntityContainer Name="SalaryModelStoreContainer">
+    <EntitySet Name="Crew_dutyfree" EntityType="Self.Crew_dutyfree" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Crew_dutyfree].[flightid] AS [flightid], 
+[Crew_dutyfree].[crewid] AS [crewid], 
+[Crew_dutyfree].[month] AS [month], 
+[Crew_dutyfree].[commission] AS [commission], 
+[Crew_dutyfree].[rate] AS [rate]
+FROM [dbo].[Crew_dutyfree] AS [Crew_dutyfree]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

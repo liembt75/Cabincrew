@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="View_Healthcare">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="mantext" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Code_tv" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="name_tv" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="man" Type="Boolean" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="noisinh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="quoctich" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pag_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pport_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="noicap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Group" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="course" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="main_base" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="from_place" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="start_date" Type="DateTime" Precision="3" />
+    <Property Name="end_date" Type="DateTime" Precision="3" />
+    <Property Name="home" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="type_tv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="term_tv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="class_tv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ann" Type="Boolean" />
+    <Property Name="lg" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="on_plan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="on_route" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="vip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="knbgoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="kn_khac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="baclg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ngaynhan" Type="DateTime" Precision="0" />
+    <Property Name="ngayve" Type="DateTime" Precision="0" />
+    <Property Name="ttut" Type="Single" />
+    <Property Name="ma_tt" Type="Single" />
+    <Property Name="fly_time" Type="Int32" />
+    <Property Name="int_time" Type="Int32" />
+    <Property Name="duty_time" Type="Int32" />
+    <Property Name="sochbay" Type="Int32" />
+    <Property Name="dubi" Type="Int32" />
+    <Property Name="night" Type="Int32" />
+    <Property Name="lc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IsCrew" Type="Boolean" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CrewID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FirstNameVn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastNameVn" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ImageBase64" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Token" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Created" Type="DateTime" Precision="3" />
+    <Property Name="Modified" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Modifier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Creatorid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modifierid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PPort_Date" Type="DateTime" Precision="3" />
+    <Property Name="InfoConfirmed" Type="Int32" />
+    <Property Name="TokenExpired" Type="DateTime" Precision="3" />
+    <Property Name="Ogranization" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="mantext" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dotkham" Type="DateTime" Precision="3" />
+    <Property Name="Expired" Type="DateTime" Precision="3" />
+    <Property Name="Chieucao" Type="Double" />
+    <Property Name="Cannang" Type="Double" />
+    <Property Name="chitietsuckhoe" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="trangthaikham" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IDDotKham" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="View_Healthcare" EntityType="Self.View_Healthcare" />
+  </EntityContainer>
+</Schema>
